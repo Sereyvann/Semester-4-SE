@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>First Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main" ng-app="myList" ng-controller="myListController">
+        <h1>To do List</h1>
+        <div class="add">
+            <input ng-model="newItem" placeholder="Add" class="addText">
+            <button ng-click="pushItem()">Add</button>
+            
+        </div>
+        <ul>
+            <li ng-repeat="i in items">
+                {{i}}
+                <span>Need to Complete</span>
+            </li>
+
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
